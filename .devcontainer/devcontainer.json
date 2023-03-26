@@ -32,7 +32,8 @@
 					".git",                // Ignore the .git directory
 					"*.json",              // Ignore all .json files.
 					"*.xml"                // Ignore all .xml files.
-				]
+				],
+				"java.compile.nullAnalysis.mode": "disabled"
 			},
 			"extensions": [
 				"streetsidesoftware.code-spell-checker",
