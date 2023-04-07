@@ -20,7 +20,7 @@
 				//"java.project.sourcePaths": [                   // Configure the source paths for
 				//	"src/main/java",                            // Code
 				//	"src/test/java"                             // Tests
-				],
+				//],
 				"java.configuration.updateBuildConfiguration": "interactive",
 				// Checkstyle configurations
 				"java.checkstyle.configuration": "${workspaceFolder}/checkstyle.xml",
