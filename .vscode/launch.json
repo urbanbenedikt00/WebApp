@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ApplicationInitializer",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.springapplicationcontext.ApplicationInitializer",
+            "projectName": "SpringApplicationContext"
+        },
+        {
+            "type": "java",
             "name": "SpringIoCApplication",
             "request": "launch",
             "mainClass": "edu.fra.uas.springioc.SpringIoCApplication",
