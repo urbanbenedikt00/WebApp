@@ -45,7 +45,8 @@
 				"vscjava.vscode-java-pack",
 				"vmware.vscode-boot-dev-pack",
 				"mhutchie.git-graph",
-				"MS-CEINTL.vscode-language-pack-de"
+				"MS-CEINTL.vscode-language-pack-de",
+				"streetsidesoftware.code-spell-checker-german"
 			]
 		}
 	}
