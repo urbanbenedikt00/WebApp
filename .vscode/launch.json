@@ -6,24 +6,31 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SpringIoCApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.springioc.SpringIoCApplication",
+            "projectName": "SpringIoC"
+        },
+        {
+            "type": "java",
             "name": "BeanBeispielExtendedTestApplication",
             "request": "launch",
             "mainClass": "edu.fra.uas.beanbeispielextendedtest.BeanBeispielExtendedTestApplication",
-            "projectName": "bean-beispiel-extended-test"
+            "projectName": "BeanBeispielExtendedTest"
         },
         {
             "type": "java",
             "name": "BeanBeispielExtendedLoggingApplication",
             "request": "launch",
             "mainClass": "edu.fra.uas.beanbeispielextendedlogging.BeanBeispielExtendedLoggingApplication",
-            "projectName": "bean-beispiel-extended-logging"
+            "projectName": "BeanBeispielExtendedLogging"
         },
         {
             "type": "java",
             "name": "BeanBeispielExtendedApplication",
             "request": "launch",
             "mainClass": "edu.fra.uas.beanbeispielextended.BeanBeispielExtendedApplication",
-            "projectName": "bean-beispiel-extended"
+            "projectName": "BeanBeispielExtended"
         },
         {
             "type": "java",
