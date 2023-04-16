@@ -23,7 +23,7 @@ public class BeanBeispielExtendedApplication {
 		return new CommandLineRunner() {
 			
 			@Override
-			public void run(String... args) throws Exception {
+			public void run(String... args) {
 				messageService.setMessage("Hello World");
 				System.out.println(messageService.getMessage());
 				messageService.setMessage("--> HHHOHHH <--");
