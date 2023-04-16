@@ -30,7 +30,7 @@
             "name": "BeanBeispielApplication",
             "request": "launch",
             "mainClass": "edu.fra.uas.beanbeispiel.BeanBeispielApplication",
-            "projectName": "bean-beispiel"
+            "projectName": "BeanBeispiel"
         }
     ]
 }
