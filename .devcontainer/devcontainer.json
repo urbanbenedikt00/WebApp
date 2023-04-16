@@ -22,6 +22,7 @@
 				//	"src/test/java"                             // Tests
 				//],
 				"java.configuration.updateBuildConfiguration": "interactive",
+    			"java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable",
 				// Checkstyle configurations
 				"java.checkstyle.configuration": "${workspaceFolder}/checkstyle.xml",
 				"java.checkstyle.version": "9.2",
