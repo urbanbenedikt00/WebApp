@@ -1,14 +1,14 @@
-package com.example.springapplicationcontext;
+package edu.fra.uas.springapplicationcontext;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class SpringApplicationContextApplication {
+public class ApplicationInitializer {
 
     public static void main(String[] args) {
-        SpringApplicationContextApplication contextApplication = new SpringApplicationContextApplication();
-//        contextApplication.startupXML();
-        contextApplication.startupAnnotation();
+        ApplicationInitializer  applicationInitializer  = new ApplicationInitializer();
+//        applicationInitializer .startupXML();
+        applicationInitializer .startupAnnotation();
     }
 
     public void startupXML() {

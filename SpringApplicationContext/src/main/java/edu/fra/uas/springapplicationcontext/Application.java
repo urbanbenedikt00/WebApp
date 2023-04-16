@@ -1,4 +1,4 @@
-package com.example.springapplicationcontext;
+package edu.fra.uas.springapplicationcontext;
 
 public class Application {
     private String name;
