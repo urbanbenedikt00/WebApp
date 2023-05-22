@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/java
 {
-  "name": "Java",
+	"name": "Java",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/java:0-17",
 	"features": {
@@ -16,16 +16,16 @@
 			"settings": {
 				"workbench.colorTheme": "Visual Studio Dark", // Set Dark Theme
 				// JAVA configurations
-				"java.project.sourcePaths": [                 // Configure the source paths for
-					"src/main/java",                            // Code
-					"src/test/java"                             // Tests
+				"java.project.sourcePaths": [				// Configure the source paths for
+					"${workspaceFolder}/src/main/java",    	// Code
+					"${workspaceFolder}/test/java"			// Tests
 				],
 				"java.configuration.updateBuildConfiguration": "interactive",
-    		"java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable",
-        // Checkstyle configurations
+				"java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable",
+				// Checkstyle configurations
 				"java.checkstyle.configuration": "${workspaceFolder}/checkstyle.xml",
 				"java.checkstyle.version": "9.2",
-        // SpellChecker configurations
+				// SpellChecker configurations
 				"cSpell.language": "en, de",
 				"cSpell.ignorePaths": [
 					"*.md",                 // Ignore the .md file 
@@ -49,5 +49,4 @@
 			]
 		}
 	}
-
 }
