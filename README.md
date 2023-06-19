@@ -6,4 +6,11 @@
     - BeanBeispiel
     - BeanBeispielExtended
     - BeanBeispielExtendedLogging
-    - BeanBeispielExtendedTest
+    - BeanBeispielExtendedTesting
+2. Zweite Übungen
+    - SpringIoC
+    - SpringApplicationContext
+    - SpringBeanLifeCycle
+    - SpringCompleteBeanLifeCycle
+    - SpringDependencyInjection
+    - SpringScopes

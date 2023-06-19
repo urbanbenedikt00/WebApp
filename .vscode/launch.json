@@ -6,45 +6,73 @@
     "configurations": [
         {
             "type": "java",
-            "name": "ApplicationInitializer",
+            "name": "BeanBeispielApplication",
             "request": "launch",
-            "mainClass": "edu.fra.uas.springapplicationcontext.ApplicationInitializer",
-            "projectName": "SpringApplicationContext"
-        },
-        {
-            "type": "java",
-            "name": "SpringIoCApplication",
-            "request": "launch",
-            "mainClass": "edu.fra.uas.springioc.SpringIoCApplication",
-            "projectName": "SpringIoC"
-        },
-        {
-            "type": "java",
-            "name": "BeanBeispielExtendedTestApplication",
-            "request": "launch",
-            "mainClass": "edu.fra.uas.beanbeispielextendedtest.BeanBeispielExtendedTestApplication",
-            "projectName": "BeanBeispielExtendedTest"
-        },
-        {
-            "type": "java",
-            "name": "BeanBeispielExtendedLoggingApplication",
-            "request": "launch",
-            "mainClass": "edu.fra.uas.beanbeispielextendedlogging.BeanBeispielExtendedLoggingApplication",
-            "projectName": "BeanBeispielExtendedLogging"
+            "mainClass": "edu.fra.uas.BeanBeispielApplication",
+            "projectName": "BeanBeispiel"
         },
         {
             "type": "java",
             "name": "BeanBeispielExtendedApplication",
             "request": "launch",
-            "mainClass": "edu.fra.uas.beanbeispielextended.BeanBeispielExtendedApplication",
+            "mainClass": "edu.fra.uas.BeanBeispielExtendedApplication",
             "projectName": "BeanBeispielExtended"
         },
         {
             "type": "java",
-            "name": "BeanBeispielApplication",
+            "name": "BeanBeispielExtendedLoggingApplication",
             "request": "launch",
-            "mainClass": "edu.fra.uas.beanbeispiel.BeanBeispielApplication",
-            "projectName": "BeanBeispiel"
+            "mainClass": "edu.fra.uas.BeanBeispielExtendedLoggingApplication",
+            "projectName": "BeanBeispielExtendedLogging"
+        },
+        {
+            "type": "java",
+            "name": "BeanBeispielExtendedTestApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.BeanBeispielExtendedTestApplication",
+            "projectName": "BeanBeispielExtendedTest"
+        },
+        {
+            "type": "java",
+            "name": "ApplicationInitializer",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.ApplicationInitializer",
+            "projectName": "SpringApplicationContext"
+        },
+        {
+            "type": "java",
+            "name": "SpringBeanLifeCycleApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.SpringBeanLifeCycleApplication",
+            "projectName": "SpringBeanLifeCycle"
+        },
+        {
+            "type": "java",
+            "name": "SpringCompleteBeanLifeCycleApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.SpringCompleteBeanLifeCycleApplication",
+            "projectName": "SpringCompleteBeanLifeCycle"
+        },
+        {
+            "type": "java",
+            "name": "SpringDependencyInjectionApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.SpringDependencyInjectionApplication",
+            "projectName": "SpringDependencyInjection"
+        },
+        {
+            "type": "java",
+            "name": "SpringIoCApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.SpringIoCApplication",
+            "projectName": "SpringIoC"
+        },
+        {
+            "type": "java",
+            "name": "SpringScopesApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.SpringScopesApplication",
+            "projectName": "SpringScopes"
         }
     ]
 }

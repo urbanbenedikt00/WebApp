@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import edu.fra.uas.beanbeispielextendedtest.controller.BeanController;
+import edu.fra.uas.controller.BeanController;
 
 @SpringBootTest
 public class ControllerTest {
