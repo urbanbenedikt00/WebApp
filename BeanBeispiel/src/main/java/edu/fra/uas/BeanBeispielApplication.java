@@ -18,7 +18,7 @@ public class BeanBeispielApplication {
 
             @Override
             public void run(String... args) {
-                System.out.println("Hallo World");
+                System.out.println("Hello World");
             }
         };
         return action;
