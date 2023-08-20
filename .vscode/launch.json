@@ -34,9 +34,9 @@
         },
         {
             "type": "java",
-            "name": "MVCApplication",
+            "name": "MvcApplication",
             "request": "launch",
-            "mainClass": "edu.fra.uas.MVCApplication",
+            "mainClass": "edu.fra.uas.MvcApplication",
             "projectName": "MVC"
         },
         {
