@@ -41,6 +41,12 @@
         },
         {
             "type": "java",
+            "name": "RestCrudApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.de.restcrud.RestCrudApplication"
+        },
+        {
+            "type": "java",
             "name": "ApplicationInitializer",
             "request": "launch",
             "mainClass": "edu.fra.uas.ApplicationInitializer",
