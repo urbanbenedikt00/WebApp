@@ -45,7 +45,7 @@ public class UserController {
 
     // http://127.0.0.1/find?id=1
     @RequestMapping(value = {"/find"}, method = RequestMethod.GET)
-    public String create(@RequestParam("id") Long userId, Model model) {
+    public String getById(@RequestParam("id") Long userId, Model model) {
         log.debug("find() is called");
         User user = userService.getUserById(userId);
         model.addAttribute("user", user);
