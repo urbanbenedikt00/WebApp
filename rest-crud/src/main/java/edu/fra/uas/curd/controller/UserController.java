@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import edu.fra.uas.curd.model.User;
 import edu.fra.uas.curd.service.UserService;
@@ -35,8 +38,8 @@ public class UserController {
 
     // http://127.0.0.1:8000/users/list
     @RequestMapping(value = {"/users/list"}, method = RequestMethod.GET)
-    // @GetMapping(value = {"/users/list"})
-    public String list(Model model) {
+    // @GetMapping(value = {"/users"})
+    public String getUsers(Model model) {
         log.debug("list() is called");
         Iterable<User> userIter = userService.getAllUsers();
         List<User> users = new ArrayList<>();
@@ -47,20 +50,23 @@ public class UserController {
         return "list.html";
     }
 
-    // http://127.0.0.1:8000/users/find?id=1
-    @RequestMapping(value = {"/users/find"}, method = RequestMethod.GET)
-    // @GetMapping(value = {"/users/find"})
-    public String getById(@RequestParam("id") Long userId, Model model) {
+    // http://127.0.0.1:8000/users/1
+    //@RequestMapping(value = {"/users/{userId}"}, method = RequestMethod.GET)
+    @ResponseBody
+    @GetMapping(value = {"/users/{userId}"})
+    public ResponseEntity<User> getUser(@PathVariable("userId") Long userId) {
         log.debug("find() is called");
         User user = userService.getUserById(userId);
-        model.addAttribute("user", user);
-        return "find.html";
+        if (user != null){
+            return new ResponseEntity<User>(user, HttpStatus.OK);
+        }
+        return new ResponseEntity<User>(HttpStatus.NOT_FOUND);
     }
 
     // http://127.0.0.1:8000/users/add?firstName=Celine&lastName=Clever&email=celine.clever%40example.com&password=123456
     @RequestMapping(value = {"/users/add"}, method = RequestMethod.GET)
     // @GetMapping(value = {"/users/add"})
-    public String add(@RequestParam("firstName") String firstName, 
+    public String addUser(@RequestParam("firstName") String firstName, 
                       @RequestParam("lastName") String lastName, 
                       @RequestParam("email") String email, 
                       @RequestParam("password") String password, 
@@ -88,8 +94,8 @@ public class UserController {
     // http://127.0.0.1:8000/users/updated?id=2&firstName=Alice&lastName=Abraham&email=alice%40example.com&password=123A456
     @RequestMapping(value = {"/users/updated"}, method = { RequestMethod.GET, RequestMethod.POST })
     // @GetMapping(value = {"/users/update"})
-    // @PutMapping(value = {"/users/update"})
-    public String update(@RequestParam("id") Long userId, 
+    // @PutMapping(value = {"/users"})
+    public String updateUser(@RequestParam("id") Long userId, 
                          @RequestParam("firstName") String firstName, 
                          @RequestParam("lastName") String lastName, 
                          @RequestParam("email") String email, 
@@ -107,12 +113,12 @@ public class UserController {
     }
 
     // http://127.0.0.1:8000/users/delete/3
-    @RequestMapping(value = {"/users/delete/{id}"}, method = RequestMethod.GET)
-    // @DeleteMapping(value = {"/users/delete/{id}"})
-    public String delete(@PathVariable("id") Long id, Model model) {
+    @RequestMapping(value = {"/users/delete/{userId}"}, method = RequestMethod.GET)
+    // @DeleteMapping(value = {"/users/{userId}"})
+    public String deleteUser(@PathVariable("userId") Long userId, Model model) {
         log.debug("delete() is called");
-        User user = userService.getUserById(id);
-        userService.deleteUser(id);
+        User user = userService.getUserById(userId);
+        userService.deleteUser(userId);
         model.addAttribute("user", user);
         return "deleted.html";
     }
