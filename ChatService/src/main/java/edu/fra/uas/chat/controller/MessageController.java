@@ -22,7 +22,7 @@ import edu.fra.uas.chat.model.Message;
 import edu.fra.uas.chat.service.MessageService;
 
 @RestController
-@RequestMapping(value = { "/messages" })
+@RequestMapping(value = {"/messages"})
 public class MessageController implements BaseController<Message> {
     private static final Logger log = LoggerFactory.getLogger(MessageController.class);
 
@@ -32,6 +32,7 @@ public class MessageController implements BaseController<Message> {
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     @Override
     public ResponseEntity<List<Message>> getAll() {
+        log.info("Get: /messages");
         Iterable<Message> messagesIterable = this.messageService.getAll();
         List<Message> messages = new ArrayList<>();
         for (Message message : messagesIterable) {
@@ -40,30 +41,34 @@ public class MessageController implements BaseController<Message> {
         return new ResponseEntity<>(messages, HttpStatus.OK);
     }
 
-    @GetMapping(value = { "/{id}" }, produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = {"/{id}"}, produces = MediaType.APPLICATION_JSON_VALUE)
     @Override
     public ResponseEntity<Message> getById(@PathVariable("id") Long id) {
+        log.info("Get: /messages/{}", id);
         Message message = this.messageService.getById(id);
         return new ResponseEntity<>(message, HttpStatus.OK);
     }
 
-    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @Override
     public ResponseEntity<Message> create(@RequestBody Message message) {
+        log.info("Post: /messages -> {}", message);
         message = this.messageService.create(message);
         return new ResponseEntity<>(message, HttpStatus.CREATED);
     }
 
-    @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @Override
     public ResponseEntity<Message> update(@RequestBody Message message) {
+        log.info("Put: /messages -> {}", message);
         message = this.messageService.update(message);
         return new ResponseEntity<>(message, HttpStatus.ACCEPTED);
     }
 
-    @DeleteMapping(value = { "/{id}" })
+    @DeleteMapping(value = {"/{id}"}, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @Override
     public ResponseEntity<String> delete(@PathVariable("id") Long id) {
+        log.info("Delete: /messages/{}", id);
         this.messageService.delete(id);
         return new ResponseEntity<>("Message is deleted", HttpStatus.ACCEPTED);
     }
