@@ -1,5 +1,7 @@
 package edu.fra.uas.chat.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,6 +10,9 @@ public class Room {
     private String name;
     private List<Message> messages = new ArrayList<>();
     private List<User> users = new ArrayList<>();
+
+    public Room() {
+    }
 
     public Room(String name) {
         this.name = name;
@@ -37,6 +42,7 @@ public class Room {
         this.messages = messages;
     }
 
+    @JsonIgnore
     public void setMessage(Message message) {
         this.messages.add(message);
     }
@@ -49,6 +55,7 @@ public class Room {
         this.users = users;
     }
 
+    @JsonIgnore
     public void setUser(User user) {
         this.users.add(user);
         ;
