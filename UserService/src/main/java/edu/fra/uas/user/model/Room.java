@@ -5,17 +5,20 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+@SuppressWarnings("unused")
 public class Room {
-
-    @JsonProperty("id")
+    private static final Logger log = LoggerFactory.getLogger(User.class);
     private Long id;
-    @JsonProperty("name")
     private String name;
-    @JsonProperty("messages")
     private List<Message> messages = new ArrayList<>();
-    @JsonProperty("users")
     private List<User> users = new ArrayList<>();
+
+    public Room() {
+        log.debug("Room created without values");
+    }
 
     public Room(String name) {
         this.name = name;
@@ -81,16 +84,12 @@ public class Room {
             return false;
         Room other = (Room) obj;
         if (name == null) {
-            if (other.name != null)
-                return false;
-        } else if (!name.equals(other.name))
-            return false;
-        return true;
+            return other.name == null;
+        } else return name.equals(other.name);
     }
 
     @Override
     public String toString() {
         return "Room [id=" + id + ", name=" + name + ", messages=" + messages + ", users=" + users + "]";
     }
-
 }

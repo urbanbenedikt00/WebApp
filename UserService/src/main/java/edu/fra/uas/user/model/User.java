@@ -3,6 +3,7 @@ package edu.fra.uas.user.model;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+@SuppressWarnings("unused")
 public class User {
     private static final Logger log = LoggerFactory.getLogger(User.class);
     private long id;
@@ -96,12 +97,8 @@ public class User {
             return false;
         }
         if (this.email == null) {
-            if (((User) object).email != null)
-                return false;
-        } else if (!this.email.equals(((User) object).email)) {
-            return false;
-        }
-        return true;
+            return ((User) object).email == null;
+        } else return this.email.equals(((User) object).email);
     }
 
     @Override

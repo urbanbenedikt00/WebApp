@@ -1,12 +1,21 @@
 package edu.fra.uas.user.model;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.time.LocalDateTime;
 
+@SuppressWarnings("unused")
 public class Message {
+    private static final Logger log = LoggerFactory.getLogger(User.class);
     private Long id;
     private String content;
     private Long userId;
     private LocalDateTime timeStamp;
+
+    public Message() {
+        log.debug("Message created without values");
+    }
 
     public Message(String content) {
         this.content = content;
@@ -69,18 +78,12 @@ public class Message {
         } else if (!content.equals(other.content))
             return false;
         if (userId == null) {
-            if (other.userId != null)
-                return false;
-        } else if (!userId.equals(other.userId))
-            return false;
-        return true;
+            return other.userId == null;
+        } else return userId.equals(other.userId);
     }
 
     @Override
     public String toString() {
         return "Message [id=" + id + ", content=" + content + ", userId=" + userId + ", timeStamp=" + timeStamp + "]";
     }
-
-    
-
 }
