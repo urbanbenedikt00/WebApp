@@ -8,6 +8,9 @@ public class Message {
     private Long userId;
     private LocalDateTime timeStamp;
 
+    public Message() {
+    }
+
     public Message(String content) {
         this.content = content;
         this.timeStamp = LocalDateTime.now();
@@ -80,7 +83,4 @@ public class Message {
     public String toString() {
         return "Message [id=" + id + ", content=" + content + ", userId=" + userId + ", timeStamp=" + timeStamp + "]";
     }
-
-    
-
 }
