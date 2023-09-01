@@ -2,14 +2,16 @@ package edu.fra.uas.chat.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 
+@SuppressWarnings("unused")
 public class Room {
     private Long id;
     private String name;
-    private List<Message> messages = new ArrayList<>();
-    private List<User> users = new ArrayList<>();
+    private Map<Long, Message> messages = new HashMap<>();
+    private Map<Long, User> users = new HashMap<>();
 
     public Room() {
     }
@@ -34,31 +36,52 @@ public class Room {
         this.name = name;
     }
 
-    public List<Message> getMessages() {
+    public Map<Long, Message> getMessages() {
         return messages;
     }
 
-    public void setMessages(List<Message> messages) {
+    public void setMessages(Map<Long, Message> messages) {
         this.messages = messages;
     }
 
     @JsonIgnore
     public void setMessage(Message message) {
-        this.messages.add(message);
+        this.messages.put(message.getId(), message);
     }
 
-    public List<User> getUsers() {
+    public Map<Long, User> getUsers() {
         return users;
     }
 
-    public void setUsers(List<User> users) {
+    public void setUsers(Map<Long, User> users) {
         this.users = users;
     }
 
     @JsonIgnore
     public void setUser(User user) {
-        this.users.add(user);
-        ;
+        this.users.put(user.getId(), user);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Room room = (Room) o;
+        return Objects.equals(name, room.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
+
+    @Override
+    public String toString() {
+        return "Room{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", messages=" + messages +
+                ", users=" + users +
+                '}';
+    }
 }
