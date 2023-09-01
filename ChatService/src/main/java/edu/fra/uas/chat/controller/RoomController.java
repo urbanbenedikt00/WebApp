@@ -24,7 +24,6 @@ import org.springframework.web.bind.annotation.RestController;
 import edu.fra.uas.chat.model.Room;
 import edu.fra.uas.chat.service.RoomService;
 
-// Import necessary libraries
 @RestController
 @RequestMapping(value = {"/rooms"})
 public class RoomController implements BaseController<Room> {
