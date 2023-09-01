@@ -1,23 +1,19 @@
 package edu.fra.uas.user.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 
 @SuppressWarnings("unused")
 public class Room {
-    private static final Logger log = LoggerFactory.getLogger(User.class);
     private Long id;
     private String name;
-    private List<Message> messages = new ArrayList<>();
-    private List<User> users = new ArrayList<>();
+    private Map<Long, Message> messages = new HashMap<>();
+    private Map<Long, User> users = new HashMap<>();
 
     public Room() {
-        log.debug("Room created without values");
     }
 
     public Room(String name) {
@@ -40,56 +36,54 @@ public class Room {
         this.name = name;
     }
 
-    public List<Message> getMessages() {
+    public Map<Long, Message> getMessages() {
         return messages;
     }
 
-    public void setMessages(List<Message> messages) {
+    public void setMessages(Map<Long, Message> messages) {
         this.messages = messages;
     }
 
     @JsonIgnore
     public void setMessage(Message message) {
-        this.messages.add(message);
+        Long id = (long) (this.messages.size() + 1);
+        this.messages.put(id, message);
     }
 
-    public List<User> getUsers() {
+    public Map<Long, User> getUsers() {
         return users;
     }
 
-    public void setUsers(List<User> users) {
+    public void setUsers(Map<Long, User> users) {
         this.users = users;
     }
 
     @JsonIgnore
     public void setUser(User user) {
-        this.users.add(user);
+        Long id = (long) (this.users.size() + 1);
+        this.users.put(id, user);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Room room = (Room) o;
+        return Objects.equals(name, room.name);
     }
 
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((name == null) ? 0 : name.hashCode());
-        return result;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Room other = (Room) obj;
-        if (name == null) {
-            return other.name == null;
-        } else return name.equals(other.name);
+        return Objects.hash(name);
     }
 
     @Override
     public String toString() {
-        return "Room [id=" + id + ", name=" + name + ", messages=" + messages + ", users=" + users + "]";
+        return "Room{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", messages=" + messages +
+                ", users=" + users +
+                '}';
     }
 }
