@@ -42,7 +42,7 @@ public class CompleteService implements ApplicationContextAware, BeanFactoryAwar
 	}
 	
 	@PostConstruct
-    public void postConstruct() {
+        public void postConstruct() {
 		log.info("postConstruct() --> " + privateAttribute);
 	}
 	
@@ -56,7 +56,7 @@ public class CompleteService implements ApplicationContextAware, BeanFactoryAwar
 	}
 	
 	@PreDestroy
-    public void preDestroy() {
+        public void preDestroy() {
 		log.info("preDestroy()");
 	}
 

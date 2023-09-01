@@ -34,6 +34,25 @@
         },
         {
             "type": "java",
+            "name": "MvcApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.MvcApplication",
+            "projectName": "MVC"
+        },
+        {
+            "type": "java",
+            "name": "RestCrudApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.de.restcrud.RestCrudApplication"
+        },
+        {
+            "type": "java",
+            "name": "JsonApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.de.json.JsonApplication"
+        },
+        {
+            "type": "java",
             "name": "ApplicationInitializer",
             "request": "launch",
             "mainClass": "edu.fra.uas.ApplicationInitializer",
