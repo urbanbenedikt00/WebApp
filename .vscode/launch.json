@@ -6,31 +6,59 @@
     "configurations": [
         {
             "type": "java",
-            "name": "BeanBeispielApplication",
+            "name": "GRpcClientApplication",
             "request": "launch",
-            "mainClass": "edu.fra.uas.BeanBeispielApplication",
-            "projectName": "BeanBeispiel"
+            "mainClass": "edu.fra.uas.GRpcClientApplication",
+            "projectName": "gRPC-Client"
         },
         {
             "type": "java",
-            "name": "BeanBeispielExtendedApplication",
+            "name": "GrpcApplication",
             "request": "launch",
-            "mainClass": "edu.fra.uas.BeanBeispielExtendedApplication",
-            "projectName": "BeanBeispielExtended"
+            "mainClass": "edu.fra.uas.GrpcApplication",
+            "projectName": "gRPC"
         },
         {
             "type": "java",
-            "name": "BeanBeispielExtendedLoggingApplication",
+            "name": "GraphQlClientSubscriptionApplication",
             "request": "launch",
-            "mainClass": "edu.fra.uas.BeanBeispielExtendedLoggingApplication",
-            "projectName": "BeanBeispielExtendedLogging"
+            "mainClass": "edu.fra.uas.GraphQlClientSubscriptionApplication",
+            "projectName": "GraphQL-Client-Subscription"
         },
         {
             "type": "java",
-            "name": "BeanBeispielExtendedTestApplication",
+            "name": "GraphQlSubscriptionApplication",
             "request": "launch",
-            "mainClass": "edu.fra.uas.BeanBeispielExtendedTestApplication",
-            "projectName": "BeanBeispielExtendedTest"
+            "mainClass": "edu.fra.uas.GraphQlSubscriptionApplication",
+            "projectName": "GraphQL-Subscription"
+        },
+        {
+            "type": "java",
+            "name": "GraphQlClientApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.GraphQlClientApplication",
+            "projectName": "graphqlClient"
+        },
+        {
+            "type": "java",
+            "name": "GraphqlClientApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.GraphqlClientApplication",
+            "projectName": "GraphQL-Client"
+        },
+        {
+            "type": "java",
+            "name": "GraphQlApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.GraphQlApplication",
+            "projectName": "GraphQL"
+        },
+        {
+            "type": "java",
+            "name": "ApiApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.ApiApplication",
+            "projectName": "RESTfulAPI"
         },
         {
             "type": "java",
@@ -41,36 +69,10 @@
         },
         {
             "type": "java",
-            "name": "RestCrudApplication",
+            "name": "SpringScopesApplication",
             "request": "launch",
-            "mainClass": "edu.fra.uas.de.restcrud.RestCrudApplication"
-        },
-        {
-            "type": "java",
-            "name": "JsonApplication",
-            "request": "launch",
-            "mainClass": "edu.fra.uas.de.json.JsonApplication"
-        },
-        {
-            "type": "java",
-            "name": "ApplicationInitializer",
-            "request": "launch",
-            "mainClass": "edu.fra.uas.ApplicationInitializer",
-            "projectName": "SpringApplicationContext"
-        },
-        {
-            "type": "java",
-            "name": "SpringBeanLifeCycleApplication",
-            "request": "launch",
-            "mainClass": "edu.fra.uas.SpringBeanLifeCycleApplication",
-            "projectName": "SpringBeanLifeCycle"
-        },
-        {
-            "type": "java",
-            "name": "SpringCompleteBeanLifeCycleApplication",
-            "request": "launch",
-            "mainClass": "edu.fra.uas.SpringCompleteBeanLifeCycleApplication",
-            "projectName": "SpringCompleteBeanLifeCycle"
+            "mainClass": "edu.fra.uas.SpringScopesApplication",
+            "projectName": "SpringScopes"
         },
         {
             "type": "java",
@@ -81,6 +83,27 @@
         },
         {
             "type": "java",
+            "name": "SpringCompleteBeanLifeCycleApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.SpringCompleteBeanLifeCycleApplication",
+            "projectName": "SpringCompleteBeanLifeCycle"
+        },
+        {
+            "type": "java",
+            "name": "SpringBeanLifeCycleApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.SpringBeanLifeCycleApplication",
+            "projectName": "SpringBeanLifeCycle"
+        },
+        {
+            "type": "java",
+            "name": "ApplicationInitializer",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.ApplicationInitializer",
+            "projectName": "SpringApplicationContext"
+        },
+        {
+            "type": "java",
             "name": "SpringIoCApplication",
             "request": "launch",
             "mainClass": "edu.fra.uas.SpringIoCApplication",
@@ -88,10 +111,37 @@
         },
         {
             "type": "java",
-            "name": "SpringScopesApplication",
+            "name": "Current File",
             "request": "launch",
-            "mainClass": "edu.fra.uas.SpringScopesApplication",
-            "projectName": "SpringScopes"
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "BeanExampleApplication(1)",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.BeanExampleApplication",
+            "projectName": "BeanExample"
+        },
+        {
+            "type": "java",
+            "name": "BeanExampleApplication(2)",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.BeanExampleApplication",
+            "projectName": "BeanExampleExtended"
+        },
+        {
+            "type": "java",
+            "name": "BeanExampleApplication(3)",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.BeanExampleApplication",
+            "projectName": "BeanExampleExtendedLogging"
+        },
+        {
+            "type": "java",
+            "name": "BeanExampleApplication(4)",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.BeanExampleApplication",
+            "projectName": "BeanExampleExtendedTesting"
         }
     ]
 }
