@@ -17,7 +17,7 @@ import edu.fra.uas.service.UserService;
 @SpringBootApplication
 public class GRpcClientApplication {
 
-		private static final Logger log = LoggerFactory.getLogger(GRpcClientApplication.class);
+	private static final Logger log = LoggerFactory.getLogger(GRpcClientApplication.class);
 
 	@Autowired
 	private UserService userService;

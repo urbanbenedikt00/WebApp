@@ -20,18 +20,18 @@
     - RESTful-API (RESTful-API - Web-Anwendung mit RESTful API von CRUD über RESTful bis HATEOAS)
 5. Übung:
     - GraphQL (GraphQL-Server - Web-Anwendung mit simpler GraphQL-API)
-    - GraphQL-Client (GraphQL-Client - Simple Spring Boot-based GraphQL-Client)
+    - GraphQL-Client (GraphQL-Client - Einfacher Spring Boot-basierter GraphQL-Client)
     - GraphQL-Subscription (GraphQL-Server - Subscription für Live-Daten über WebSocket)
     - GraphQL-Client-Subscription (GraphQL-Client - Subscription von RealTime-Daten über WebSocket)
 6. Übung:
-    - gRPC-Server (gRPC-Server - Web-Anwendung mit simpler gRPC-API)
-    - gRPC-Client ()
-    [https://github.com/fullstorydev/grpcui/releases/tag/v1.4.1]
-7. Fünfte Übung:
+    - gRPC (gRPC-Server - Web-Anwendung mit simpler gRPC-API)
+    - gRPC-Client (gRPC-Client - Einfacher Spring Boot-basierter gRPC-Client)
+    - gRPC-Streaming (gRPC-Server - Streaming mit gRPC: Client-seitig, Server-seitig und bidirektional)
+    - gRPC-Client-Streaming (gRPC-Client - Streaming mit gRPC: Client-seitig, Server-seitig und bidirektional)
+    gRPC-Client-UI zum Download [https://github.com/fullstorydev/grpcui/releases/tag/v1.4.1]
+7. Übung: ### TODO
     - UserService und ChatService
-8. Sechste Übung
+8. Übung ### TODO
     - IntroAngular (SPA)
-9. Siebte Übung
+9. Übung ### TODO
     - Angular Progressive App
-10. Achte Übung
-    - sdsf

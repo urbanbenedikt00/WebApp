@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "GRpcClientStreamingApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.GRpcClientStreamingApplication",
+            "projectName": "gRPC-Client-Streaming"
+        },
+        {
+            "type": "java",
+            "name": "GRpcStreamingApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.GRpcStreamingApplication",
+            "projectName": "gRPC-Streaming"
+        },
+        {
+            "type": "java",
             "name": "GRpcClientApplication",
             "request": "launch",
             "mainClass": "edu.fra.uas.GRpcClientApplication",

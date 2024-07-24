@@ -30,6 +30,10 @@
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
 		<!-- gRPC -->
 		<dependency>
 			<groupId>io.grpc</groupId>
@@ -87,10 +91,6 @@
 			</extension>
 		</extensions>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
 			<!-- Enables automatic creation of java classes from protobuf -->
 			<plugin>
 				<groupId>org.xolstice.maven.plugins</groupId>
@@ -100,6 +100,8 @@
 					<protocArtifact>com.google.protobuf:protoc:3.25.1:exe:${os.detected.classifier}</protocArtifact>
 					<pluginId>grpc-java</pluginId>
 					<pluginArtifact>io.grpc:protoc-gen-grpc-java:1.63.0:exe:${os.detected.classifier}</pluginArtifact>
+					<outputDirectory>src/main/java</outputDirectory>
+					<clearOutputDirectory>false</clearOutputDirectory>
 				</configuration>
 				<executions>
 					<execution>
@@ -109,6 +111,10 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>

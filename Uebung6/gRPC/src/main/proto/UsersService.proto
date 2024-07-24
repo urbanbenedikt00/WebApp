@@ -1,5 +1,5 @@
 syntax = "proto3";
-package edu.fra.uas;
+package edu.fra.uas.grpc;
 
 import "google/protobuf/wrappers.proto";
 

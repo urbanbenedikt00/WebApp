@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.1</version>
+		<version>3.3.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>edu.fra.uas</groupId>
-	<artifactId>gRPC</artifactId>
+	<artifactId>gRPC-Client-Streaming</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>gRPC</name>
-	<description>gRPC-Server demo project for Spring Boot</description>
+	<name>gRPC-Client-Streaming</name>
+	<description>gRPC-Client Streaming demo project for Spring Boot</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -32,7 +32,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>	
+			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 		<!-- gRPC -->
 		<dependency>
@@ -53,7 +53,7 @@
 		<!-- gRPC Spring Boot starter -->
 		<dependency>
 			<groupId>net.devh</groupId>
-			<artifactId>grpc-server-spring-boot-starter</artifactId>
+			<artifactId>grpc-client-spring-boot-starter</artifactId>
 			<version>3.1.0.RELEASE</version>
 		</dependency>
 		<!-- gRPC protobuf -->

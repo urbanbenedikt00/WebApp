@@ -15,7 +15,6 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import java.util.stream.Collectors;
 
 import edu.fra.uas.model.StockPrice;
@@ -120,9 +119,8 @@ public class GraphqlController {
     @SubscriptionMapping
     public Flux<StockPrice> stockPrice(@Argument String symbol) {
         log.debug("stockPrice() is called");
-        Random random = new Random();
         return Flux.interval(Duration.ofSeconds(1))
-                .map(l -> new StockPrice(symbol, random.nextDouble(), LocalDateTime.now().toString()));
+                .map(l -> new StockPrice(symbol, Math.random(), LocalDateTime.now().toString()));
     }
 
 }
