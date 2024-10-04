@@ -30,7 +30,8 @@
     - gRPC-Client-Streaming (gRPC-Client - Streaming mit gRPC: Client-seitig, Server-seitig und bidirektional)
     gRPC-Client-UI zum Download [https://github.com/fullstorydev/grpcui/releases/tag/v1.4.1]
 7. Übung: ### TODO
-    - UserService und ChatService
+    - ChatService (RESTful ChatService - Einfacher ChatService inkl. API Key-Erweiterung zur Athentifizierung)
+    - UserService (RESTful UserService - Erweiterter UserService)
 8. Übung ### TODO
     - IntroAngular (SPA)
 9. Übung ### TODO

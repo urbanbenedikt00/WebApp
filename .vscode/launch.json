@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "UserApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.UserApplication",
+            "projectName": "UserService"
+        },
+        {
+            "type": "java",
+            "name": "ChatApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.ChatApplication",
+            "projectName": "ChatService"
+        },
+        {
+            "type": "java",
+            "name": "GraphQlClientApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.GraphQlClientApplication",
+            "projectName": "GraphQL-Client"
+        },
+        {
+            "type": "java",
             "name": "GRpcClientStreamingApplication",
             "request": "launch",
             "mainClass": "edu.fra.uas.GRpcClientStreamingApplication",
@@ -51,7 +72,7 @@
             "name": "GraphQlClientApplication",
             "request": "launch",
             "mainClass": "edu.fra.uas.GraphQlClientApplication",
-            "projectName": "GraphQL-Client"
+            "projectName": "graphqlClient"
         },
         {
             "type": "java",
