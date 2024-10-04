@@ -22,7 +22,7 @@
     - GraphQL (GraphQL-Server - Web-Anwendung mit simpler GraphQL-API)
     - GraphQL-Client (GraphQL-Client - Einfacher Spring Boot-basierter GraphQL-Client)
     - GraphQL-Subscription (GraphQL-Server - Subscription für Live-Daten über WebSocket)
-    - GraphQL-Client-Subscription (GraphQL-Client - Subscription von RealTime-Daten über WebSocket)
+    - GraphQL-Client-Subscription (GraphQL-Client - Subscription von Realtime-Daten über WebSocket)
 6. Übung:
     - gRPC (gRPC-Server - Web-Anwendung mit simpler gRPC-API)
     - gRPC-Client (gRPC-Client - Einfacher Spring Boot-basierter gRPC-Client)
@@ -34,4 +34,4 @@
 8. Übung ### TODO
     - IntroAngular (SPA)
 9. Übung ### TODO
-    - Angular Progressive App
+    - PWA (Angular Progressive Web App)

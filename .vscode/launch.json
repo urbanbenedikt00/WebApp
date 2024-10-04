@@ -51,7 +51,7 @@
             "name": "GraphQlClientApplication",
             "request": "launch",
             "mainClass": "edu.fra.uas.GraphQlClientApplication",
-            "projectName": "graphqlClient"
+            "projectName": "GraphQL-Client"
         },
         {
             "type": "java",

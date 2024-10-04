@@ -19,7 +19,7 @@ message UsersResponse {
 }
 
 service UsersService {
-    // lista all users
+    // list all users
     rpc listUsers(UsersRequest) returns (UsersResponse);
     // finds a user by id
     rpc findUserById(google.protobuf.Int64Value) returns (UserProto);
