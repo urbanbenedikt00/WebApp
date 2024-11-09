@@ -36,7 +36,9 @@ public class BeanController {
     public double getSchnitt () {
         return gradeService.getSchnitt();
     }
-
+    public void clearNotes () {
+        gradeService.clearGrades();
+    }
 
 
 }

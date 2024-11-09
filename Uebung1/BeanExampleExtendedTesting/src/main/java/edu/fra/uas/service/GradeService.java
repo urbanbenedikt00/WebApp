@@ -32,6 +32,11 @@ public class GradeService {
 
     }
 
+    public void clearGrades (){
+        notenliste.clear();
+        log.debug("Notenliste wurde gelöscht");
+    }
+
 
 
 
