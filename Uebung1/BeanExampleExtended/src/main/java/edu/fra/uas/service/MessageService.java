@@ -2,7 +2,7 @@ package edu.fra.uas.service;
 
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class MessageService {
 
     private String message;

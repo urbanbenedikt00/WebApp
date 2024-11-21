@@ -1,5 +1,11 @@
 package edu.fra.uas.service;
 
-public class FirstS {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+
+@Service
+public class FirstS {
+    @Autowired
+    private CounterS counterS;
 }

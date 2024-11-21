@@ -6,13 +6,19 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import edu.fra.uas.service.MessageService;
+import edu.fra.uas.service.FirstS;
+import edu.fra.uas.service.SecondS;
+import edu.fra.uas.service.ThirdS;
 
 @SpringBootApplication
 public class BeanExampleApplication {
 
+	//@Autowired
+	//private FirstS firstS;
+	//@Autowired
+	//private SecondS secondS;
 	@Autowired
-	private MessageService messageService;
+	private ThirdS thirdS;
 
 	public static void main(String[] args) {
 		SpringApplication.run(BeanExampleApplication.class, args);
