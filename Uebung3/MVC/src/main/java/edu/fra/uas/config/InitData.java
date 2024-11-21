@@ -11,15 +11,19 @@ import jakarta.annotation.PostConstruct;
 @Component
 public class InitData {
 
+    // Logger für die Ausgabe von Debug-Informationen
     private final Logger log = org.slf4j.LoggerFactory.getLogger(InitData.class);
     
+    // UserService wird automatisch von Spring injiziert
     @Autowired
     UserService userService;
 
+    // Methode wird nach der Konstruktion des Beans aufgerufen
     @PostConstruct
     public void init() {
         log.debug("### Initialize Data ###");
 
+        // Erstellen und Speichern des Admin-Benutzers
         log.debug("create user admin");
         User user = new User();
         user.setRole("ADMIN");
@@ -29,6 +33,7 @@ public class InitData {
         user.setPassword("extremeSecurePassword1234");
         userService.createUser(user);
 
+        // Erstellen und Speichern des Benutzers Alice
         log.debug("create user alice");
         user = new User();
         user.setRole("USER");
@@ -38,6 +43,7 @@ public class InitData {
         user.setPassword("alice1234");
         userService.createUser(user);
 
+        // Erstellen und Speichern des Benutzers Bob
         log.debug("create user bob");
         user = new User();
         user.setRole("USER");
