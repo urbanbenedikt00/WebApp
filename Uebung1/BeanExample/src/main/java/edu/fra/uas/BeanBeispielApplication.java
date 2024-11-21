@@ -27,6 +27,7 @@ public class BeanBeispielApplication {
         return new CommandLineRunner() {
             @Override
             public void run(String... args) throws Exception {
+                System.out.println(beanController.putMessage("Hallo Welt"));
                 log.debug(beanController.putMessage("Hallo Welt"));
                 log.debug(beanController.putMessage("--> OOOHOOO <--"));
             }

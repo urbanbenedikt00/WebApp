@@ -29,12 +29,7 @@ public class BeanExampleApplication {
 			public void run(String... args) throws Exception {
 				//log.debug(beanController.putMessage("Hello World"));
 				//log.debug(beanController.putMessage("--> OOOHOOO <--"));
-				beanController.addNote(1.3);
-				beanController.addNote(1.0);
-				beanController.addNote(1.7);
-				beanController.addNote(1.3);
-				beanController.addNote(1.7);
-				beanController.getSchnitt();
+
 
 
 			}

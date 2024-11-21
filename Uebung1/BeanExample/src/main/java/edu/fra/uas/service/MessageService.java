@@ -1,6 +1,9 @@
 package edu.fra.uas.service;
 
+
+import org.springframework.stereotype.Service;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 @Component
 public class MessageService {
