@@ -23,10 +23,7 @@ public class BeanExampleApplication {
 		CommandLineRunner action = new CommandLineRunner() {
 			@Override
 			public void run(String... args) throws Exception {
-				messageService.setMessage("Hello World!");
-				System.out.println(messageService.getMessage());
-				messageService.setMessage("--> HHHOHHH <--");
-				System.out.println(messageService.getMessage());
+				
 			}
 		};
 		return action;

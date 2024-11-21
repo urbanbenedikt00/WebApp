@@ -8,11 +8,11 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 
 @Component
-@Qualifier("drilling")
-public class Drilling implements Work{
-    private static final Logger LOGGER = LoggerFactory.getLogger(Drilling.class);
+@Qualifier("spachteln")
+public class Spachteln implements Work{
+    private static final Logger LOGGER = LoggerFactory.getLogger(Spachteln.class);
 
     public void doWork() {
-        LOGGER.info(" --> drill a hole into the wall");
+        LOGGER.info(" --> spachtel dir Skyr ins Maul");
     }
 }

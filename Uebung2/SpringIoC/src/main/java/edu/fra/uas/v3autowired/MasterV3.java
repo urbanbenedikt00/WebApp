@@ -8,7 +8,11 @@ public class MasterV3 {
     @Autowired
     Journeyman journeyman;
 
+    @Autowired
+    Knecht knecht;
+
     public void delegateWork() {
         journeyman.performWork();
+        knecht.performWork();
     }
 }
