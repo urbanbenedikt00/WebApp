@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>MVC Example</title>
+        <link rel="stylesheet" type="text/css" href="/css/basics.css">
+    </head>
+    <body>
+        <h1>Notenschnitt Rechner</h1>
+
+        <!-- Form zum Eingeben von Noten -->
+        <form action="/add" method="get">
+            <label for="note">Note eingeben:</label>
+            <input type="number" id="note" name="note" step="0.01" required>
+            <button type="submit">Note hinzufügen</button>
+        </form>
+
+        <form action="/remove" method="get">
+            <button type="submit">Remove</button>
+        </form>
+
+
+        <div>
+            <h3>Durchschnitt der Noten: <span th:text="${average}"></span></h3>
+        </div>
+        
+
+        <!-- Tabelle der bestehenden Noten -->
+        <h2>Bestehende Noten</h2>
+        <table>
+            <tr>
+                <th>Note</th>
+            </tr>
+            <tr th:each="note : ${noten}">
+                <td th:text="${note}">Note</td>
+            </tr>
+        </table>
+
+        <footer>
+            <small id="today"></small>
+        </footer>
+        <script src="/js/date.js"></script>
+    </body>
+</html>
